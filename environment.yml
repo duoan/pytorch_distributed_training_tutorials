@@ -1,0 +1,80 @@
+name: pytorch-distributed
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.10
+
+  # build helpers
+  - ninja
+  - cmake
+
+
+  # Distributed training libraries
+  - tensorboard
+  - tensorboardx
+  
+  # Scientific computing
+  - numpy
+  - scipy
+  - pandas
+  
+  # Data processing and visualization
+  - matplotlib
+  - seaborn
+  - pillow
+  - opencv
+  
+  # Development tools
+  - jupyter
+  - jupyterlab
+  - ipython
+  - notebook
+  
+  # Code quality and testing
+  - pytest
+  - black
+  - flake8
+  - mypy
+  
+  # Utilities
+  - tqdm
+  - pyyaml
+  - h5py
+  
+  # Additional ML libraries
+  - scikit-learn
+  
+  # Pip packages
+  - pip
+  - pip:
+    - --index-url https://download.pytorch.org/whl/cu130
+    - torch
+    - torchvision
+    - --extra-index-url https://pypi.org/simple
+    # Distributed training frameworks
+    - accelerate
+    - deepspeed
+    - megatron-fsdp
+    
+    # Experiment tracking
+    - wandb
+    - mlflow
+    
+    # Additional utilities
+    - transformers
+    - datasets
+    - timm
+    - einops
+    
+    # Profiling and debugging
+    - py-spy
+    - memory-profiler
+    
+    # Documentation
+    - sphinx
+    - sphinx-rtd-theme
