@@ -58,6 +58,7 @@ dependencies:
     - --extra-index-url https://pypi.org/simple
     # Distributed training frameworks
     - accelerate
+    - bitsandbytes
     - deepspeed
     - megatron-fsdp
     
@@ -65,7 +66,9 @@ dependencies:
     - wandb
     - mlflow
     
+
     # Additional utilities
+    - torchinfo
     - transformers
     - datasets
     - timm
